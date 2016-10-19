@@ -63,8 +63,6 @@
 
   <remove-project name="platform/hardware/qcom/power" />
 
-  <project name="omnirom/android_packages_apps_SnapdragonCamera" path="packages/apps/SnapdragonCamera" remote="github" revision="android-6.0" />
-
   <remove-project name="platform/packages/apps/DeskClock" />
   <project name="AOSPlusone/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="github" revision="nougat" />
 
