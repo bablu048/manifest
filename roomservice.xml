@@ -68,4 +68,6 @@
 
   <project name="SlimSaber/scripts" path="scripts" remote="github" revision="master" />
 
+  <project path="vendor/abyss" name="purenexus-bacon/android_vendor_abyss" remote="github" revision="n" />
+
 </manifest>
