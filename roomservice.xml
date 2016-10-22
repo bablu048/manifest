@@ -21,7 +21,7 @@
   <project name="AOSPlusone/android_hardware_libhardware" path="hardware/libhardware" remote="github" revision="nougat" />
 
   <project name="purenexus-bacon/android_device_oneplus_bacon" path="device/oneplus/bacon" remote="github" revision="n" />
-  <project name="AOSP-bacon/android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="github" revision="purenexus" />
+  <project name="kwoktopus/abyss_kernel_bacon" path="kernel/oneplus/msm8974" remote="github" revision="cm-14.0" />
   <project name="AOSPlusone/android_external_sony_boringssl-compat" path="external/boringssl-compat" remote="github" revision="cm-13.0" />
   <project name="AOSPlusone/android_device_qcom_common" path="device/qcom/common" remote="github" revision="nougat" />
   <project name="AOSPlusone/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="github" revision="nougat" />
@@ -68,6 +68,6 @@
 
   <project name="SlimSaber/scripts" path="scripts" remote="github" revision="master" />
 
-  <project path="vendor/abyss" name="purenexus-bacon/android_vendor_abyss" remote="github" revision="n" />
+  <project name="AOSPA/android_packages_apps_SnapdragonCamera" path="packages/apps/SnapdragonCamera" remote="github" revision="nougat-caf" />
 
 </manifest>
