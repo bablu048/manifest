@@ -20,12 +20,12 @@
   <remove-project name="platform/hardware/libhardware" />
   <project name="AOSPlusone/android_hardware_libhardware" path="hardware/libhardware" remote="github" revision="nougat" />
 
-  <project name="purenexus-bacon/android_device_oneplus_bacon" path="device/oneplus/bacon" remote="github" revision="n-original" />
+  <project name="purenexus-bacon/android_device_oneplus_bacon" path="device/oneplus/bacon" remote="github" revision="n" />
   <project name="AOSP-bacon/android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="github" revision="purenexus" />
-  <project name="AOSP-bacon/android_external_sony_boringssl-compat" path="external/boringssl-compat" remote="github" revision="cm-13.0" />
-  <project name="AOSP-bacon/android_device_qcom_common" path="device/qcom/common" remote="github" revision="nougat" />
-  <project name="AOSP-bacon/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="github" revision="cm-13.0" />
-  <project name="AOSP-bacon/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="nougat" clone-depth="1" />
+  <project name="AOSPlusone/android_external_sony_boringssl-compat" path="external/boringssl-compat" remote="github" revision="cm-13.0" />
+  <project name="AOSPlusone/android_device_qcom_common" path="device/qcom/common" remote="github" revision="nougat" />
+  <project name="AOSPlusone/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="github" revision="cm-13.0" />
+  <project name="AOSPlusone/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="nougat" clone-depth="1" />
 
   <remove-project name="android_frameworks_av" />
   <project name="purenexus-bacon/android_frameworks_av" path="frameworks/av" remote="github" revision="n" />
@@ -62,7 +62,6 @@
   <project name="AOSPlusone/android_system_core" path="system/core" remote="github" revision="nougat" />
 
   <remove-project name="platform/hardware/qcom/power" />
-  <project name="AOSP-bacon/android_hardware_qcom_power" path="hardware/qcom/power" remote="github" revision="nougat" />
 
   <remove-project name="platform/packages/apps/DeskClock" />
   <project name="AOSPlusone/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="github" revision="nougat" />
