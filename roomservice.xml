@@ -3,6 +3,10 @@
   <remote  name="github"
            fetch="https://github.com" />
 
+  <remote name = "bb"
+          revision = "master"
+          fetch = "https://bitbucket.org/" />
+
   <remove-project name="android_build" />
   <project name="purenexus-bacon/android_build" path="build" remote="github" revision="n">
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -30,15 +34,23 @@
   <remove-project name="android_frameworks_av" />
   <project name="purenexus-bacon/android_frameworks_av" path="frameworks/av" remote="github" revision="n" />
 
-  <remove-project name="platform/frameworks/native" />
+  <remove-project name="android_frameworks_native" />
   <project name="purenexus-bacon/android_frameworks_native" path="frameworks/native" remote="github" revision="nougat" />
-
-  <remove-project name="android_kernel_lge_bullhead" />
-  <remove-project name="android_kernel_moto_shamu" />
-  <remove-project name="android_kernel_huawei_angler" />
 
   <remove-project name="platform/external/libnfc-nci" />
   <project name="AOSPlusone/android_external_libnfc-nci" path="external/libnfc-nci" remote="github" revision="nougat" />
+  <remove-project name="platform/external/sqlite" />
+  <project name="purenexus-bacon/android_external_sqlite" path="external/sqlite" remote="github" revision="n" />
+  <remove-project name="platform/external/jemalloc" />
+  <project name="purenexus-bacon/android_external_jemalloc" path="external/jemalloc" remote="github" revision="n" />
+
+  <!-- bionic -->
+  <remove-project name="platform/bionic" />
+  <project name="purenexus-bacon/android_bionic" path="bionic" remote="github" revision="n" />
+
+  <!-- art -->
+  <remove-project name="platform/art" />
+  <project name="purenexus-bacon/android_art" path="art" remote="github" revision="n" />
 
   <remove-project name="platform/hardware/qcom/audio" />
   <project name="AOSPlusone/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" revision="nougat" />
@@ -47,7 +59,7 @@
   <project name="AOSPlusone/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" revision="nougat" />
 
   <remove-project name="platform/hardware/qcom/display" />
-  <project name="AOSPlusone/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf/msm8974" remote="github" revision="nougat" />
+  <project name="AOSP-bacon/android_hardware_qcom_display-caf" path="hardware/qcom/display-caf/msm8974" remote="github" revision="nougat" />
 
   <remove-project name="platform/hardware/qcom/media" />
   <project name="AOSPlusone/android_hardware_qcom_media-caf" path="hardware/qcom/media-caf/msm8974" remote="github" revision="nougat" />
@@ -59,20 +71,49 @@
   <project name="AOSPlusone/android_system_vold" path="system/vold" remote="github" revision="nougat" />
 
   <remove-project name="android_system_core" />
-  <project name="AOSPlusone/android_system_core" path="system/core" remote="github" revision="nougat" />
+  <project name="purenexus-bacon/android_system_core" path="system/core" remote="github" revision="n" />
 
   <remove-project name="platform/hardware/qcom/power" />
 
-  <remove-project name="platform/packages/apps/DeskClock" />
-  <project name="AOSPlusone/android_packages_apps_DeskClock" path="packages/apps/DeskClock" remote="github" revision="nougat" />
-
-  <project name="CyanogenMod/android_packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="cm-14.0" />
-
-  <!-- Remove Purenexus-->
   <remove-project name="android_system_sepolicy" />
-  
-  <!-- Add OMS Substratum PureNexus-->
   <project name="purenexus-bacon/system_sepolicy" path="system/sepolicy" remote="github" revision="n"/>
-  <project name="katinatez/masquerade" path="packages/apps/masquerade" remote="github" revision="master" />
+
+  <!-- new toolchain -->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="mdalexca/arm-linux-androideabi-4.9" remote="bb" />
+
+  <!-- remove unneeded stuff -->
+  <remove-project name="platform/hardware/bsp/intel" />
+  <remove-project name="platform/hardware/google/apf"  />
+  <remove-project name="platform/hardware/intel/audio_media"  />
+  <remove-project name="platform/hardware/intel/bootstub"  />
+  <remove-project name="platform/hardware/intel/common/bd_prov"  />
+  <remove-project name="platform/hardware/intel/common/libmix"  />
+  <remove-project name="platform/hardware/intel/common/libstagefrighthw"  />
+  <remove-project name="platform/hardware/intel/common/libva"  />
+  <remove-project name="platform/hardware/intel/common/libwsbm"  />
+  <remove-project name="platform/hardware/intel/common/omx-components"  />
+  <remove-project name="platform/hardware/intel/common/utils"  />
+  <remove-project name="platform/hardware/intel/common/wrs_omxil_core"  />
+  <remove-project name="platform/hardware/intel/img/hwcomposer"  />
+  <remove-project name="platform/hardware/intel/img/psb_headers"  />
+  <remove-project name="platform/hardware/intel/img/psb_video"  />
+  <remove-project name="platform/hardware/intel/sensors"  />
+  <remove-project name="platform/hardware/marvell/bt"  />
+  <remove-project name="platform/hardware/ti/omap3"  />
+  <remove-project name="platform/hardware/ti/omap4-aah"  />
+  <remove-project name="platform/hardware/ti/omap4xxx"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1"  />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8"  />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"  />
+  <remove-project name="platform/prebuilts/gdb/darwin-x86"  />
+  <remove-project name="platform/prebuilts/go/darwin-x86"  />
+  <remove-project name="platform/prebuilts/ninja/darwin-x86"  />
+  <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5"  />
 
 </manifest>
